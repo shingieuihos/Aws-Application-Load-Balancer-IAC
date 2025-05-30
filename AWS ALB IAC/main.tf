@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_lb" "alb" {
-  name               = "example-alb"
+  name               = "shingi-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.alb_security_group_id]  # ✅ Added SG here
@@ -13,7 +13,7 @@ resource "aws_lb" "alb" {
 }
 
 resource "aws_lb_target_group" "alb_tg" {
-  name        = "alb-target-group"
+  name        = "shingi-alb-target-group"
   port        = 80
   protocol    = "HTTP"
   target_type = "instance"
