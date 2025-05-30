@@ -6,7 +6,7 @@ resource "aws_lb" "alb" {
   name               = "shingi-alb"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [var.alb_security_group_id]  # ✅ Added SG here
+  security_groups    = [var.alb_security_group_id]  
   subnets            = var.subnet_ids
 
   enable_deletion_protection = false
